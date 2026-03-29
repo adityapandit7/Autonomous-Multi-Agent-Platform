@@ -1,0 +1,94 @@
+
+===========================================================================
+  COMPARISON REPORT — CodeT5+ Fine-tuned vs Ollama Models
+  Autonomous Multi-Agent Platform
+===========================================================================
+
+===========================================================================
+  REFACTORING EVALUATION
+===========================================================================
+  Metric                    CodeT5+ (fine-tuned)      codellama:7b              deepseek-coder_6:7b       gemma3:12b                qwen2_5vl:7b              
+---------------------------------------------------------------------------
+  AST Valid                 YES                       YES                       NO                        NO                        YES                       
+  Style score               0.833                     1.000                     1.000                     1.000                     1.000                     
+  Logic correctness         N/A                       1.000                     0.600                     1.000                     1.000                     
+  CodeBLEU                  0.537                     0.842                     0.328                     0.721                     0.863                     
+  Extract Method            N/A                       YES                       NO                        YES                       YES                       
+  LOC original              36                        36                        36                        36                        36                        
+  LOC refactored            33                        32                        7                         30                        33                        
+  LOC delta                 3                         4                         29                        6                         3                         
+  Improvement score         0.725                     0.111                     0.806                     0.167                     0.083                     
+  Confidence                0.796                     0.817                     0.501                     0.625                     0.812                     
+  Confidence status         ✅ GOOD                    EXCELLENT                 FAIR                      GOOD                      EXCELLENT                 
+
+  Confidence bars:
+    CodeT5+ (fine-tuned) : ████████████████░░░░ 0.796
+    codellama:7b         : ████████████████░░░░ 0.817
+    deepseek-coder_6:7b  : ██████████░░░░░░░░░░ 0.501
+    gemma3:12b           : ████████████░░░░░░░░ 0.625
+    qwen2_5vl:7b         : ████████████████░░░░ 0.812
+
+===========================================================================
+  DOCUMENTATION EVALUATION
+===========================================================================
+  Metric                    CodeT5+ (fine-tuned)      codellama:7b              deepseek-coder_6:7b       gemma3:12b                qwen2_5vl:7b              
+---------------------------------------------------------------------------
+  Coverage score            1.000                     1.000                     1.000                     1.000                     1.000                     
+  Completeness score        1.000                     1.000                     1.000                     1.000                     1.000                     
+  Has description           YES                       YES                       YES                       YES                       YES                       
+  Has @param tags           YES                       YES                       YES                       YES                       YES                       
+  Has all params            N/A                       YES                       YES                       YES                       YES                       
+  Has @return tag           YES                       YES                       YES                       YES                       YES                       
+  Proper format             N/A                       YES                       YES                       YES                       YES                       
+  No HTML noise             YES                       YES                       YES                       YES                       YES                       
+  Param coverage            N/A                       1.000                     1.000                     1.000                     1.000                     
+  Word count                70                        85                        106                       79                        91                        
+  Confidence                1.000                     1.000                     1.000                     1.000                     1.000                     
+  Confidence status         ✅ EXCELLENT               EXCELLENT                 EXCELLENT                 EXCELLENT                 EXCELLENT                 
+
+  Confidence bars:
+    CodeT5+ (fine-tuned) : ████████████████████ 1.000
+    codellama:7b         : ████████████████████ 1.000
+    deepseek-coder_6:7b  : ████████████████████ 1.000
+    gemma3:12b           : ████████████████████ 1.000
+    qwen2_5vl:7b         : ████████████████████ 1.000
+
+===========================================================================
+  SUMMARY
+===========================================================================
+  CodeT5+ 770M (fine-tuned):
+    Refactor confidence : 0.796
+    CodeBLEU            : 0.537
+    Logic correctness   : Structural refactoring
+    @param tags         : YES  |  @return tag: YES
+    Documentation       : Generates Javadoc with @param/@return (1/6 params, 128-token limit)
+
+  codellama:7b (zero-shot):
+    Refactor confidence : 0.817
+    CodeBLEU (vs orig)  : 0.842
+    Logic correctness   : 1.000
+    Doc confidence      : 1.000
+
+  deepseek-coder_6:7b (zero-shot):
+    Refactor confidence : 0.501
+    CodeBLEU (vs orig)  : 0.328
+    Logic correctness   : 0.600
+    Doc confidence      : 1.000
+
+  gemma3:12b (zero-shot):
+    Refactor confidence : 0.625
+    CodeBLEU (vs orig)  : 0.721
+    Logic correctness   : 1.000
+    Doc confidence      : 1.000
+
+  qwen2_5vl:7b (zero-shot):
+    Refactor confidence : 0.812
+    CodeBLEU (vs orig)  : 0.863
+    Logic correctness   : 1.000
+    Doc confidence      : 1.000
+
+  KEY FINDING:
+    Zero-shot Ollama models outperform fine-tuned CodeT5+ on both tasks.
+    Ollama CodeBLEU measured vs original code — lower = more restructuring done.
+    CodeT5+ generates valid Javadoc with @param/@return but is limited to 1/6 params (128-token window).
+    Larger zero-shot models provide complete Javadoc with no fine-tuning required.

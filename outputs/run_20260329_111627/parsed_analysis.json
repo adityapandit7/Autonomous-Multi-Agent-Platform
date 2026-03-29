@@ -1,0 +1,31 @@
+{
+  "parse_success": true,
+  "parser_used": "javalang",
+  "language": "java",
+  "total_loc": 36,
+  "classes": [
+    {
+      "name": "PaymentProcessor",
+      "lineno": 1,
+      "loc": 36,
+      "method_count": 1
+    }
+  ],
+  "functions": [
+    {
+      "name": "applyDiscount",
+      "lineno": 3,
+      "loc": 33,
+      "param_count": 6,
+      "return_type": "double",
+      "modifiers": [
+        "public"
+      ],
+      "nesting_depth": 2,
+      "conditional_count": 8,
+      "loop_count": 0,
+      "responsibility_count": 1,
+      "parser_used": "javalang"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "timestamp": "20260329_111843",
+  "models_tested": [
+    "codellama:7b",
+    "deepseek-coder:6.7b",
+    "gemma3:12b",
+    "qwen2.5vl:7b"
+  ],
+  "refactoring": {
+    "codellama:7b": {
+      "confidence": 0.817,
+      "logic": 1.0,
+      "ast_valid": true,
+      "extracted": 1,
+      "loc_original": 36,
+      "loc_refactored": 32
+    },
+    "deepseek-coder:6.7b": {
+      "confidence": 0.501,
+      "logic": 0.6,
+      "ast_valid": false,
+      "extracted": 0,
+      "loc_original": 36,
+      "loc_refactored": 7
+    },
+    "gemma3:12b": {
+      "confidence": 0.625,
+      "logic": 1.0,
+      "ast_valid": false,
+      "extracted": 2,
+      "loc_original": 36,
+      "loc_refactored": 30
+    },
+    "qwen2.5vl:7b": {
+      "confidence": 0.812,
+      "logic": 1.0,
+      "ast_valid": true,
+      "extracted": 1,
+      "loc_original": 36,
+      "loc_refactored": 33
+    }
+  },
+  "documentation": {
+    "codellama:7b": {
+      "confidence": 1.0,
+      "param_coverage": 1.0,
+      "has_return": true,
+      "completeness": 1.0
+    },
+    "deepseek-coder:6.7b": {
+      "confidence": 1.0,
+      "param_coverage": 1.0,
+      "has_return": true,
+      "completeness": 1.0
+    },
+    "gemma3:12b": {
+      "confidence": 1.0,
+      "param_coverage": 1.0,
+      "has_return": true,
+      "completeness": 1.0
+    },
+    "qwen2.5vl:7b": {
+      "confidence": 1.0,
+      "param_coverage": 1.0,
+      "has_return": true,
+      "completeness": 1.0
+    }
+  }
+}

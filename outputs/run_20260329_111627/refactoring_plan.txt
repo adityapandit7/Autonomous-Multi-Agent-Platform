@@ -1,0 +1,19 @@
+JAVA REFACTORING PLAN
+==================================================
+Methods analysed : 1
+Smells detected  : 3
+
+1. [MEDIUM] Long Method
+   Method    : applyDiscount
+   Measured  : loc = 33 (threshold: 30)
+   Action    : Apply Extract Method — split into focused private helper methods.
+
+2. [MEDIUM] Long Parameter List
+   Method    : applyDiscount
+   Measured  : param_count = 6 (threshold: 5)
+   Action    : Introduce a Parameter Object or use the Builder pattern.
+
+3. [MEDIUM] Complex Conditional
+   Method    : applyDiscount
+   Measured  : conditional_count = 8 (threshold: 5)
+   Action    : Apply Guard Clauses, Strategy pattern, or Map-based dispatch.

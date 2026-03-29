@@ -1,0 +1,60 @@
+{
+  "ast_validity": {
+    "valid": true,
+    "method": "javalang",
+    "error": null
+  },
+  "style_metrics": {
+    "score": 0.833,
+    "checks": {
+      "camel_case_methods": true,
+      "pascal_case_classes": false,
+      "brace_same_line": true,
+      "spaces_not_tabs": true,
+      "has_semicolons": true,
+      "minimal_trailing_ws": true
+    },
+    "passed": 5,
+    "total": 6
+  },
+  "codebleu_score": 0.537,
+  "semantic_preservation": {
+    "score": 1.0,
+    "preservation_rate": 1.0,
+    "token_similarity": 0.608,
+    "ideal_similarity": true,
+    "length_ratio": 1.158,
+    "length_ok": true,
+    "original_methods": [
+      "applyDiscount"
+    ],
+    "preserved_methods": [
+      "applyDiscount"
+    ]
+  },
+  "improvement": {
+    "score": 0.725,
+    "loc_original": 36,
+    "loc_refactored": 33,
+    "loc_delta": 3,
+    "depth_original": 8,
+    "depth_refactored": 9,
+    "changed_lines": 36
+  },
+  "confidence": {
+    "score": 0.796,
+    "status": "\u2705 GOOD",
+    "components": {
+      "style": 0.833,
+      "codebleu": 0.537,
+      "semantic": 1.0,
+      "improvement": 0.725
+    },
+    "weights": {
+      "style": 0.2,
+      "codebleu": 0.25,
+      "semantic": 0.35,
+      "improvement": 0.2
+    }
+  }
+}

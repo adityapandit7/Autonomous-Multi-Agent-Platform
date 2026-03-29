@@ -1,0 +1,7 @@
+{
+  "model": "deepseek-coder:6.7b",
+  "duration_seconds": 16.16,
+  "success": true,
+  "error": null,
+  "output_cleaned": "private double calculateDiscount(double price, String customerType,\n                                 String couponCode, boolean isSeasonal,\n                                 int quantity, boolean isMember) {\n    double discount = 0;\n\n    if (customerType.equals(\"premium\")) {\n        discount += 0.20;\n    } else if (customerType.equals(\"gold\")) {<beginofsentence>"
+}

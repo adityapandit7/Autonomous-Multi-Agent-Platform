@@ -1,0 +1,92 @@
+{
+  "raw_code": "public class PaymentProcessor {\n\n    public double applyDiscount(double price, String customerType,\n                                String couponCode, boolean isSeasonal,\n                                int quantity, boolean isMember) {\n        double discount = 0;\n\n        if (customerType.equals(\"premium\")) {\n            discount += 0.20;\n        } else if (customerType.equals(\"gold\")) {\n            discount += 0.15;\n        } else if (customerType.equals(\"silver\")) {\n            discount += 0.10;\n        }\n\n        if (couponCode.equals(\"SAVE10\")) {\n            discount += 0.10;\n        } else if (couponCode.equals(\"SAVE5\")) {\n            discount += 0.05;\n        }\n\n        if (isSeasonal) {\n            discount += 0.15;\n        }\n\n        if (quantity > 10) {\n            discount += 0.10;\n        }\n\n        if (isMember) {\n            discount += 0.05;\n        }\n\n        return price * (1 - Math.min(discount, 0.50));\n    }\n}\n",
+  "classes": [
+    {
+      "name": "PaymentProcessor",
+      "methods": [],
+      "docstring": null,
+      "file_path": "",
+      "superclass": null,
+      "interfaces": [],
+      "is_abstract": false,
+      "lcom": 0.0,
+      "instability": 0.0
+    }
+  ],
+  "functions": [
+    {
+      "name": "applyDiscount",
+      "params": [
+        "p0",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5"
+      ],
+      "docstring": null,
+      "file_path": "",
+      "start_line": 3,
+      "end_line": 0,
+      "calls": [],
+      "called_by": [],
+      "complexity": 8,
+      "loc": 33,
+      "cohesion_score": 1.0
+    }
+  ],
+  "imports": [],
+  "metadata": {
+    "parser_used": "javalang",
+    "total_loc": 36,
+    "mode": "both",
+    "refactor_prompt": "Refactor this Java Long Method (33 lines, threshold 30) using Extract Method.\n\n    public double applyDiscount(double price, String customerType,\n                                String couponCode, boolean isSeasonal,\n                                int quantity, boolean isMember) {\n        double discount = 0;\n\n        if (customerType.equals(\"premium\")) {\n            discount += 0.20;\n        } else if (customerType.equals(\"gold\")) {\n            discount += 0.15;\n        } else if (customerType.equals(\"silver\")) {\n            discount += 0.10;\n        }\n\n        if (couponCode.equals(\"SAVE10\")) {\n            discount += 0.10;\n        } else if (couponCode.equals(\"SAVE5\")) {\n            discount += 0.05;\n        }\n\n        if (isSeasonal) {\n            discount += 0.15;\n        }\n\n        if (quantity > 10) {\n            discount += 0.10;\n        }\n\n        if (isMember) {\n            discount += 0.05;\n        }\n\n        return price * (1 - Math.min(discount, 0.50));\n    }\n\nStrategy: Extract cohesive groups into private helper methods.\nReturn ONLY the refactored Java code:\n\n// Additional smells also present: Long Parameter List, Complex Conditional",
+    "doc_prompt": "Generate Javadoc for the following Java code.\nMethods: applyDiscount\nCode quality issues: Long Method, Long Parameter List, Complex Conditional.\n\npublic class PaymentProcessor {\n\n    public double applyDiscount(double price, String customerType,\n                                String couponCode, boolean isSeasonal,\n                                int quantity, boolean isMember) {\n        double discount = 0;\n\n        if (customerType.equals(\"premium\")) {\n            discount += 0.20;\n        } else if (customerType.equals(\"gold\")) {\n            discount += 0.15;\n        } else if (customerType.equals(\"silver\")) {\n            discount += 0.10;\n        }\n\n        if (couponCode.equals(\"SAVE10\")) {\n            discount += 0.10;\n        } else if (couponCode.equals(\"SAVE5\")) {\n            discount += 0.05;\n        }\n\n        if (isSeasonal) {\n            discount += 0.15;\n        }\n\n        if (quantity > 10) {\n            discount += 0.10;\n        }\n\n        if (isMember) {\n            discount += 0.05;\n        }\n\n        return price * (1 - Math.min(discount, 0.50));\n    }\n}\n\n\nReturn ONLY the Javadoc:",
+    "repo_hash": "f1b0769f89da58498cfc45744f9b7c3e4480b0d1e3f76d7c50558e92a69ab735"
+  },
+  "smells": [
+    {
+      "smell_type": "Long Method",
+      "location": "applyDiscount",
+      "description": "loc=33 (threshold=30)",
+      "severity": 2,
+      "agent_id": "smell_detector",
+      "confidence": 1.0,
+      "reasoning": "Method 'applyDiscount' has 33 lines (threshold: 30)"
+    },
+    {
+      "smell_type": "Long Parameter List",
+      "location": "applyDiscount",
+      "description": "param_count=6 (threshold=5)",
+      "severity": 2,
+      "agent_id": "smell_detector",
+      "confidence": 1.0,
+      "reasoning": "Method 'applyDiscount' has 6 parameters (threshold: 5)"
+    },
+    {
+      "smell_type": "Complex Conditional",
+      "location": "applyDiscount",
+      "description": "conditional_count=8 (threshold=5)",
+      "severity": 2,
+      "agent_id": "smell_detector",
+      "confidence": 1.0,
+      "reasoning": "Method 'applyDiscount' has 8 conditional branches (threshold: 5)"
+    }
+  ],
+  "tasks": [],
+  "refactor_results": [],
+  "documentation_results": [],
+  "evaluation_scores": {},
+  "completed_tasks": [],
+  "provenance_log": [
+    {
+      "version": 1,
+      "agent_id": "pipeline",
+      "action": "smells_attached",
+      "summary": "3 smell(s) from SmellDetector"
+    }
+  ],
+  "version": 1,
+  "structural_hash": "f1e7401399935b84f8958a1d31a3f717b9d77a98eda12ccaffaab98018e7c2e3",
+  "execution_hash": "df8e2763ecd3ebde14be9a5a46752f0de2002cd957649da53ef773b339f83df8"
+}

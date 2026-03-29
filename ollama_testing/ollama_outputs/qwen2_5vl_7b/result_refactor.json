@@ -1,0 +1,7 @@
+{
+  "model": "qwen2.5vl:7b",
+  "duration_seconds": 120.42,
+  "success": true,
+  "error": null,
+  "output_cleaned": "public double applyDiscount(double price, String customerType,\n                            String couponCode, boolean isSeasonal,\n                            int quantity, boolean isMember) {\n    double discount = applyDiscountRules(price, customerType, couponCode, isSeasonal, quantity, isMember);\n    return price * (1 - Math.min(discount, 0.50));\n}\n\nprivate double applyDiscountRules(double price, String customerType,\n                                  String couponCode, boolean isSeasonal,\n                                  int quantity, boolean isMember) {\n    double discount = 0;\n\n    if (customerType.equals(\"premium\")) {\n        discount += 0.20;\n    } else if (customerType.equals(\"gold\")) {\n        discount += 0.15;\n    } else if (customerType.equals(\"silver\")) {\n        discount += 0.10;\n    }\n\n    if (couponCode.equals(\"SAVE10\")) {\n        discount += 0.10;\n    } else if (couponCode.equals(\"SAVE5\")) {\n        discount += 0.05;\n    }\n\n    if (isSeasonal) {\n        discount += 0.15;\n    }\n\n    if (quantity > 10) {\n        discount += 0.10;\n    }\n\n    if (isMember) {\n        discount += 0.05;\n    }\n\n    return discount;\n}"
+}

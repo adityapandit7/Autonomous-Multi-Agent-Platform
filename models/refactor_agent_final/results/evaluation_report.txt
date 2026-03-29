@@ -1,0 +1,37 @@
+============================================================
+REFACTOR AGENT v2 — EVALUATION REPORT
+Generated: 2026-03-21 13:08
+============================================================
+
+DATASET
+  Train : 12,872  Val : 1,625  Test : 1,586
+  Input window  : 512 tokens (CodeT5+ fixed limit)
+  Output window : 256 tokens
+
+HYPERPARAMETERS
+  LR=2e-04  LoRA r=16  alpha=32  dropout=0.05
+  Batch=2  GradAcc=16  EffBatch=32  Epochs=3
+
+EVALUATION METRICS (test set)
+----------------------------------------
+  ROUGE-1           : 0.8766
+  ROUGE-2           : 0.8156
+  ROUGE-L           : 0.8614
+  BLEU-4            : 82.01
+  Exact Match       : 0.0950  (19/200)
+  AST Validity      : 0.9900  (198/200 valid)
+  Syntax Error Rate : 0.0100
+  Method Extraction : 0.0900  (18/200)
+  LOC Delta (input) : +0.3 lines avg
+  Token Similarity  : 0.7849
+  Edit Distance     : 0.2151  (0=identical)
+
+SAVED FILES
+  /kaggle/working/graphs/training_curves.png
+  /kaggle/working/graphs/metrics_all.png
+  /kaggle/working/graphs/generation_quality.png
+  /kaggle/working/graphs/logic_reasoning.png
+  /kaggle/working/graphs/eda_dashboard.png
+  /kaggle/working/graphs/token_lengths.png
+  /kaggle/working/results/evaluation_results.json
+============================================================

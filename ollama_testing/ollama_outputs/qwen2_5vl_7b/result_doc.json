@@ -1,0 +1,7 @@
+{
+  "model": "qwen2.5vl:7b",
+  "duration_seconds": 98.45,
+  "success": true,
+  "error": null,
+  "output_cleaned": "/**\n * Applies a discount to the given price based on the customer type, coupon code, seasonal status, quantity, and membership status.\n * \n * @param price The original price of the item.\n * @param customerType The type of customer (e.g., \"premium\", \"gold\", \"silver\").\n * @param couponCode The coupon code applied to the purchase.\n * @param isSeasonal Indicates if the purchase is seasonal.\n * @param quantity The quantity of items purchased.\n * @param isMember Indicates if the customer is a member.\n * @return The discounted price after applying all applicable discounts.\n */"
+}

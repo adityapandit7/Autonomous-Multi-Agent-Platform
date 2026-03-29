@@ -1,0 +1,50 @@
+{
+  "coverage": {
+    "score": 1.0,
+    "covered": 1,
+    "total": 1,
+    "covered_functions": [
+      "applyDiscount"
+    ],
+    "missing_functions": []
+  },
+  "completeness": {
+    "score": 1.0,
+    "checks": {
+      "has_overview": true,
+      "has_method_docs": true,
+      "has_description": true,
+      "no_html_noise": true,
+      "has_parameters": true,
+      "has_param_tags": true,
+      "has_return_info": true,
+      "has_return_tag": true
+    },
+    "passed": 8,
+    "total": 8
+  },
+  "length": {
+    "score": 1.0,
+    "word_count": 70,
+    "line_count": 25,
+    "expected_min": 20,
+    "expected_max": 200
+  },
+  "bleu": 0.0,
+  "rouge_l": 0.0,
+  "has_reference": false,
+  "confidence": {
+    "score": 1.0,
+    "status": "\u2705 EXCELLENT",
+    "components": {
+      "coverage": 1.0,
+      "completeness": 1.0,
+      "length": 1.0
+    },
+    "weights": {
+      "coverage": 0.35,
+      "completeness": 0.35,
+      "length": 0.3
+    }
+  }
+}

@@ -1,0 +1,39 @@
+public double applyDiscount(double price, String customerType,
+                                String couponCode, boolean isSeasonal,
+                                int quantity, boolean isMember) {
+    return calculateDiscount(price, customerType, couponCode, isSeasonal, quantity, isMember);
+}
+
+private double calculateDiscount(double price, String customerType,
+                                String couponCode, boolean isSeasonal,
+                                int quantity, boolean isMember) {
+    double discount = 0;
+
+    if (customerType.equals("premium")) {
+        discount += 0.20;
+    } else if (customerType.equals("gold")) {
+        discount += 0.15;
+    } else if (customerType.equals("silver")) {
+        discount += 0.10;
+    }
+
+    if (couponCode.equals("SAVE10")) {
+        discount += 0.10;
+    } else if (couponCode.equals("SAVE5")) {
+        discount += 0.05;
+    }
+
+    if (isSeasonal) {
+        discount += 0.15;
+    }
+
+    if (quantity > 10) {
+        discount += 0.10;
+    }
+
+    if (isMember) {
+        discount += 0.05;
+    }
+
+    return price * (1 - Math.min(discount, 0.50));
+}

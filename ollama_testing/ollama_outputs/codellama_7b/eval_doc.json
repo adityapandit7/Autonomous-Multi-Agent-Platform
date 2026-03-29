@@ -1,0 +1,44 @@
+{
+  "completeness": {
+    "score": 1.0,
+    "checks": {
+      "has_description": true,
+      "has_return_tag": true,
+      "has_param_tags": true,
+      "has_all_params": true,
+      "proper_format": true,
+      "no_html_noise": true
+    },
+    "passed": 6,
+    "total": 6
+  },
+  "parameter_coverage": {
+    "score": 1.0,
+    "covered": [
+      "price",
+      "customerType",
+      "couponCode",
+      "isSeasonal",
+      "quantity",
+      "isMember"
+    ],
+    "missing": [],
+    "param_tags_found": [
+      "price",
+      "customerType",
+      "couponCode",
+      "isSeasonal",
+      "quantity",
+      "isMember"
+    ]
+  },
+  "length": {
+    "word_count": 85,
+    "line_count": 11,
+    "ok": true
+  },
+  "confidence": {
+    "score": 1.0,
+    "status": "EXCELLENT"
+  }
+}

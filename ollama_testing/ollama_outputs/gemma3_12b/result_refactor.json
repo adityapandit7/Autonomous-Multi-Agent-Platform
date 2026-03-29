@@ -1,0 +1,7 @@
+{
+  "model": "gemma3:12b",
+  "duration_seconds": 66.33,
+  "success": true,
+  "error": null,
+  "output_cleaned": "public double applyDiscount(double price, String customerType,\n                                String couponCode, boolean isSeasonal,\n                                int quantity, boolean isMember) {\n        double discount = calculateCustomerDiscount(customerType);\n        discount += calculateCouponDiscount(couponCode);\n        discount += (isSeasonal  0.15 : 0.0);\n        discount += (quantity > 10  0.10 : 0.0);\n        discount += (isMember  0.05 : 0.0);\n\n        return price * (1 - Math.min(discount, 0.50));\n    }\n\nprivate double calculateCustomerDiscount(String customerType) {\n        double discount = 0.0;\n        if (customerType.equals(\"premium\")) {\n            discount += 0.20;\n        } else if (customerType.equals(\"gold\")) {\n            discount += 0.15;\n        } else if (customerType.equals(\"silver\")) {\n            discount += 0.10;\n        }\n        return discount;\n    }\n\nprivate double calculateCouponDiscount(String couponCode) {\n        double discount = 0.0;\n        if (couponCode.equals(\"SAVE10\")) {\n            discount += 0.10;\n        } else if (couponCode.equals(\"SAVE5\")) {\n            discount += 0.05;\n        }\n        return discount;\n    }"
+}

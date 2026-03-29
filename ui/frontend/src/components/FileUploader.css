@@ -1,0 +1,145 @@
+.file-uploader {
+  width: 100%;
+}
+
+.upload-area {
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--bg);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-area:hover {
+  border-color: var(--primary);
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.upload-area.active {
+  border-color: var(--accent);
+  background: #fff;
+  border-style: solid;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.upload-area:hover .upload-icon {
+  transform: scale(1.1);
+  color: var(--primary-dark);
+}
+
+.upload-text {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.upload-hint {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.file-types {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.file-type-badge {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-family: 'Fira Code', monospace;
+}
+
+.upload-area.active .file-type-badge {
+  border-color: var(--accent-light);
+  color: var(--accent);
+}
+
+/* Error state */
+.upload-area.error {
+  border-color: #e74c3c;
+  background: #fff5f5;
+}
+
+.upload-area.error .upload-icon {
+  color: #e74c3c;
+}
+
+/* Success state */
+.upload-area.success {
+  border-color: #27ae60;
+  background: #f0fff4;
+}
+
+.upload-area.success .upload-icon {
+  color: #27ae60;
+}
+
+/* Loading state */
+.upload-area.loading {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.upload-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 1rem auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .upload-area {
+    padding: 2rem;
+  }
+  
+  .upload-text {
+    font-size: 1rem;
+  }
+  
+  .file-types {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-area {
+    padding: 1.5rem;
+    min-height: 150px;
+  }
+  
+  .upload-icon {
+    font-size: 2.5rem;
+  }
+}

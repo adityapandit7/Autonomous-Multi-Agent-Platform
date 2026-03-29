@@ -1,0 +1,7 @@
+{
+  "model": "codellama:7b",
+  "duration_seconds": 17.01,
+  "success": true,
+  "error": null,
+  "output_cleaned": "/**\n* Applies a discount to the given price based on the customer type, coupon code, seasonality, quantity, and membership status.\n*\n* @param price The original price of the item\n* @param customerType The type of customer (premium, gold, silver)\n* @param couponCode The coupon code applied to the purchase\n* @param isSeasonal Whether the purchase is made during a season\n* @param quantity The quantity of items purchased\n* @param isMember Whether the customer is a member\n* @return The discounted price\n*/"
+}

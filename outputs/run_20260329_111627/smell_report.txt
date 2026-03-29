@@ -1,0 +1,26 @@
+============================================================
+CODE SMELL ANALYSIS REPORT — Java
+============================================================
+Methods analysed : 1
+Classes analysed : 1
+Total LOC        : 36
+Smells detected  : 3
+Parser used      : javalang
+Thresholds from  : DACOS dataset
+
+🟡 [MEDIUM] Long Method
+   Method    : applyDiscount
+   Reason    : Method 'applyDiscount' has 33 lines (threshold: 30)
+   Refactor  : Apply Extract Method — split into focused private helper methods.
+
+🟡 [MEDIUM] Long Parameter List
+   Method    : applyDiscount
+   Reason    : Method 'applyDiscount' has 6 parameters (threshold: 5)
+   Refactor  : Introduce a Parameter Object or use the Builder pattern.
+
+🟡 [MEDIUM] Complex Conditional
+   Method    : applyDiscount
+   Reason    : Method 'applyDiscount' has 8 conditional branches (threshold: 5)
+   Refactor  : Apply Guard Clauses, Strategy pattern, or Map-based dispatch.
+
+============================================================

@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-03-21T13:08:53.803660",
+  "version": "v2",
+  "base_model": "Salesforce/codet5p-770m",
+  "dataset": "RCCT Java",
+  "n_test": 200,
+  "token_limits": {
+    "input": 512,
+    "output": 256,
+    "note": "Fixed by CodeT5+ architecture. codet5p-2b offers 2048 tokens."
+  },
+  "hyperparameters": {
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "batch_size": 2,
+    "grad_accum": 16,
+    "eff_batch": 32,
+    "epochs": 3
+  },
+  "metrics": {
+    "rouge1": 0.8766,
+    "rouge2": 0.8156,
+    "rougeL": 0.8614,
+    "bleu4": 82.01,
+    "codebleu": null,
+    "exact_match": 0.095,
+    "ast_validity": 0.99,
+    "syntax_error_rate": 0.01,
+    "method_extraction": 0.09,
+    "avg_loc_delta": 0.3,
+    "token_similarity": 0.7849,
+    "avg_edit_distance": 0.2151
+  },
+  "training_log": [
+    {
+      "epoch": 0.9993784959602238,
+      "eval_loss": 0.11484775692224503,
+      "rougeL": 0.8693,
+      "rouge1": 0.8811,
+      "rouge2": 0.8137
+    },
+    {
+      "epoch": 1.9987569919204475,
+      "eval_loss": 0.1097443625330925,
+      "rougeL": 0.8771,
+      "rouge1": 0.8884,
+      "rouge2": 0.8249
+    },
+    {
+      "epoch": 2.9981354878806714,
+      "eval_loss": 0.10871289670467377,
+      "rougeL": 0.8593,
+      "rouge1": 0.8715,
+      "rouge2": 0.8044
+    }
+  ],
+  "v1_bugs_fixed": [
+    "Seq2SeqTrainer (was plain Trainer)",
+    "Input=512/Target=256 (was both 256)",
+    "Dynamic padding (was max_length padding)",
+    "fp16=True (was False)",
+    "load_best_model_at_end=True",
+    "Fresh training (no Colab->Kaggle transfer)"
+  ]
+}

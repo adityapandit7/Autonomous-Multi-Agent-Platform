@@ -1,0 +1,41 @@
+{
+  "project_name": "Autonomous Multi-Agent Platform for Code Refactoring and Documentation",
+  "version": "2.0.0",
+  "language": "java",
+  "dacos": {
+    "path": "C:\\Users\\Administrator\\Documents\\GitHub\\Major_Project\\datasets\\dacos"
+  },
+  "models": {
+    "base_model": "Salesforce/codet5p-770m",
+    "refactor_adapter_path": "models/refactor_agent_final",
+    "doc_adapter_path": "models/doc_agent_final",
+    "max_input_length": 512,
+    "max_output_length": 256,
+    "num_beams": 2,
+    "device": "auto"
+  },
+  "thresholds": {
+    "long_method_lines": 30,
+    "long_method_severe": 50,
+    "long_method_critical": 70,
+    "long_param_count": 5,
+    "long_param_severe": 8,
+    "long_param_critical": 12,
+    "complex_conditional": 5,
+    "complex_conditional_severe": 10,
+    "complex_conditional_critical": 15,
+    "multifaceted_abstraction": 2,
+    "multifaceted_abstraction_severe": 3,
+    "multifaceted_abstraction_critical": 5
+  },
+  "pipeline": {
+    "mode": "both",
+    "save_outputs": true,
+    "output_dir": "outputs",
+    "graphs_dir": "graphs"
+  },
+  "evaluation": {
+    "confidence_threshold_accept": 0.75,
+    "confidence_threshold_conditional": 0.65
+  }
+}

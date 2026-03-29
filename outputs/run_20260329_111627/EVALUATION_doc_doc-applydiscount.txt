@@ -1,0 +1,67 @@
+============================================================
+JAVA DOCUMENTATION QUALITY EVALUATION REPORT
+============================================================
+Generated: 2026-03-29 11:17:20
+
+METHOD COVERAGE
+----------------------------------------
+Score  : 1.0/1.0
+Covered: 1/1 methods
+
+COMPLETENESS
+----------------------------------------
+Score : 1.0/1.0  (8/8 checks passed)
+  ✅ Has Overview
+  ✅ Has Method Docs
+  ✅ Has Description
+  ✅ No Html Noise
+  ✅ Has Parameters
+  ✅ Has Param Tags
+  ✅ Has Return Info
+  ✅ Has Return Tag
+
+LENGTH & READABILITY
+----------------------------------------
+Score      : 1.0/1.0
+Word count : 70  (expected 20–200)
+Line count : 25
+
+OVERALL CONFIDENCE
+----------------------------------------
+Score  : 1.0/1.0
+Status : ✅ EXCELLENT
+
+Component Scores:
+  Coverage        ████████████████████  1.000  (35%)
+  Completeness    ████████████████████  1.000  (35%)
+  Length          ████████████████████  1.000  (30%)
+
+============================================================
+VERDICT
+============================================================
+✅ Documentation ACCEPTED — Good to excellent quality.
+
+============================================================
+DOCUMENTATION PREVIEW (first 20 lines)
+============================================================
+   1: # Code Documentation
+   2: 
+   3: ## Overview
+   4: 
+   5: This module contains 1 function(s) and 1 class(es).
+   6: 
+   7: ---
+   8: 
+   9: ## Functions
+  10: 
+  11: ### `applyDiscount`
+  12: 
+  13: **Signature:** ` void applyDiscount(...)`
+  14: 
+  15: **Description:** Applies discount to a price.
+  16: 
+  17: @param price the price to apply discount to
+  18: @return the discounted price
+  19: 
+  20: | Metric | Value |
+  ... (25 lines total)

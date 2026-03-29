@@ -1,0 +1,7 @@
+{
+  "model": "deepseek-coder:6.7b",
+  "duration_seconds": 18.98,
+  "success": true,
+  "error": null,
+  "output_cleaned": "/**\n * Calculates the discounted price based on various factors such as customer type, coupon code, seasonal status, quantity of items purchased, and membership status.\n * @param price The original price before any discounts are applied.\n * @param customerType The type of customer (premium, gold, silver).\n * @param couponCode The code for the discount coupon.\n * @param isSeasonal Whether or not the product being purchased is in season.\n * @param quantity The number of items being purchased.\n * @param isMember Whether or not the customer has a membership with the store.\n * @return The price after all applicable discounts have been subtracted, capped at 50%.\n */"
+}

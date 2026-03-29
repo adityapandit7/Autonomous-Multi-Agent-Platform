@@ -1,0 +1,44 @@
+[
+  {
+    "version": 1,
+    "agent": "pipeline",
+    "action": "smells_attached",
+    "summary": "3 smell(s) from SmellDetector"
+  },
+  {
+    "version": 2,
+    "agent": "planner",
+    "action": "plan_from_smells",
+    "summary": "Generated 2 task(s) from 3 smell(s)"
+  },
+  {
+    "version": 3,
+    "agent": "supervisor",
+    "action": "task_started:refactor-applydiscount",
+    "summary": "[in_progress] refactor-applydiscount \u2014 attempt 1"
+  },
+  {
+    "version": 4,
+    "agent": "supervisor",
+    "action": "task_done",
+    "summary": "refactor-applydiscount DONE (confidence=1.00)"
+  },
+  {
+    "version": 5,
+    "agent": "supervisor",
+    "action": "task_started:doc-applydiscount",
+    "summary": "[in_progress] doc-applydiscount \u2014 attempt 1"
+  },
+  {
+    "version": 6,
+    "agent": "supervisor",
+    "action": "task_done",
+    "summary": "doc-applydiscount DONE (confidence=1.00)"
+  },
+  {
+    "version": 7,
+    "agent": "evaluator",
+    "action": "evaluation_complete",
+    "summary": "refactor_conf=0.796 doc_conf=1.000"
+  }
+]

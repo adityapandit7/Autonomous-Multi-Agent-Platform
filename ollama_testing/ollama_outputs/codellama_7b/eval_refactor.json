@@ -1,0 +1,56 @@
+{
+  "ast_validity": {
+    "valid": true,
+    "method": "javalang",
+    "error": null
+  },
+  "style_metrics": {
+    "score": 1.0,
+    "checks": {
+      "camel_case_methods": true,
+      "brace_same_line": true,
+      "spaces_not_tabs": true,
+      "has_semicolons": true,
+      "minimal_trailing_ws": true,
+      "no_integer_discounts": true
+    },
+    "passed": 6,
+    "total": 6
+  },
+  "logic_correctness": {
+    "score": 1.0,
+    "checks": {
+      "uses_equals_not_==": true,
+      "discount_values_decimal": true,
+      "balanced_braces": true,
+      "has_return_statement": true,
+      "preserves_method_name": true
+    },
+    "passed": 5,
+    "total": 5
+  },
+  "improvement": {
+    "loc_original": 36,
+    "loc_refactored": 32,
+    "loc_delta": 4,
+    "score": 0.111
+  },
+  "extract_method": {
+    "extracted_methods": 1,
+    "applied": true
+  },
+  "codebleu": {
+    "score": 0.8418,
+    "components": {
+      "ngram_match_score": 0.7899,
+      "weighted_ngram_match_score": 1.0,
+      "syntax_match_score": 0.9873,
+      "dataflow_match_score": 0.5897
+    },
+    "note": "vs original (lower = more restructured)"
+  },
+  "confidence": {
+    "score": 0.817,
+    "status": "EXCELLENT"
+  }
+}

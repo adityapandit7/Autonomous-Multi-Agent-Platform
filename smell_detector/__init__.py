@@ -1,0 +1,1 @@
+from .smell_detector import SmellDetector

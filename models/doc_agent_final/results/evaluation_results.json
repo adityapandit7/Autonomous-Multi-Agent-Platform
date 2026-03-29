@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-03-21T14:45:54.814060",
+  "version": "v3",
+  "dataset": "CodeSearchNet Java",
+  "n_train": 50000,
+  "n_test": 200,
+  "hyperparameters": {
+    "lr": 0.0001,
+    "lora_r": 8,
+    "lora_alpha": 32,
+    "batch": 4,
+    "grad_acc": 8,
+    "eff_batch": 32,
+    "epochs": 1,
+    "precision": "fp32"
+  },
+  "metrics": {
+    "rouge1": 0.2886,
+    "rouge2": 0.0981,
+    "rougeL": 0.2251,
+    "bleu": 8.01,
+    "bertscore_f1": 0.782,
+    "exact_match": 0.0,
+    "param_coverage": 0.91,
+    "return_rate": 0.91,
+    "javadoc_quality": 0.965
+  },
+  "training_log": [
+    {
+      "epoch": 0.99968,
+      "eval_loss": 1.7661333084106445,
+      "rougeL": 0.3102,
+      "rouge1": 0.359,
+      "rouge2": 0.1662
+    }
+  ]
+}
