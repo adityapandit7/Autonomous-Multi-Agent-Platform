@@ -1,0 +1,14 @@
+[
+  {
+    "version": 1,
+    "agent": "pipeline",
+    "action": "smells_attached",
+    "summary": "5 smell(s) from SmellDetector"
+  },
+  {
+    "version": 2,
+    "agent": "evaluator",
+    "action": "evaluation_complete",
+    "summary": "partial evaluation"
+  }
+]

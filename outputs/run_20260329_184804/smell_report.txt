@@ -1,0 +1,36 @@
+============================================================
+CODE SMELL ANALYSIS REPORT — Java
+============================================================
+Methods analysed : 2
+Classes analysed : 1
+Total LOC        : 85
+Smells detected  : 5
+Parser used      : javalang
+Thresholds from  : DACOS dataset
+
+🔴 [CRITICAL] Complex Conditional
+   Method    : calculateDiscount
+   Reason    : Method 'calculateDiscount' has 16 conditional branches (threshold: 5)
+   Refactor  : Apply Guard Clauses, Strategy pattern, or Map-based dispatch.
+
+🟡 [HIGH] Long Method
+   Method    : calculateDiscount
+   Reason    : Method 'calculateDiscount' has 56 lines (threshold: 30)
+   Refactor  : Apply Extract Method — split into focused private helper methods.
+
+🟡 [HIGH] Long Parameter List
+   Method    : calculateDiscount
+   Reason    : Method 'calculateDiscount' has 8 parameters (threshold: 5)
+   Refactor  : Introduce a Parameter Object or use the Builder pattern.
+
+🟡 [HIGH] Multifaceted Abstraction
+   Method    : processOrder
+   Reason    : Method 'processOrder' has 3 distinct responsibilities (threshold: 2)
+   Refactor  : Apply Single Responsibility Principle — extract each responsibility into its own method.
+
+🟡 [MEDIUM] Multifaceted Abstraction
+   Method    : calculateDiscount
+   Reason    : Method 'calculateDiscount' has 2 distinct responsibilities (threshold: 2)
+   Refactor  : Apply Single Responsibility Principle — extract each responsibility into its own method.
+
+============================================================

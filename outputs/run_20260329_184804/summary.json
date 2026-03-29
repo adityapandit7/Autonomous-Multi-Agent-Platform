@@ -1,0 +1,57 @@
+{
+  "timestamp": "20260329_184804",
+  "mode": "refactor",
+  "agent_flags_active": {
+    "use_repo_state": true,
+    "use_symbol_index": true,
+    "use_evaluator": true
+  },
+  "input": {
+    "parser": "javalang",
+    "loc": 85,
+    "methods": 2,
+    "classes": 1,
+    "smells": [
+      {
+        "name": "Complex Conditional",
+        "severity": "critical",
+        "function": "calculateDiscount"
+      },
+      {
+        "name": "Long Method",
+        "severity": "high",
+        "function": "calculateDiscount"
+      },
+      {
+        "name": "Long Parameter List",
+        "severity": "high",
+        "function": "calculateDiscount"
+      },
+      {
+        "name": "Multifaceted Abstraction",
+        "severity": "high",
+        "function": "processOrder"
+      },
+      {
+        "name": "Multifaceted Abstraction",
+        "severity": "medium",
+        "function": "calculateDiscount"
+      }
+    ]
+  },
+  "refactor": null,
+  "doc": null,
+  "evaluation_scores": {},
+  "tasks_completed": 0,
+  "tasks_total": 0,
+  "state_version": 2,
+  "files": [
+    "PROMPT_doc_agent.txt",
+    "PROMPT_refactor_agent.txt",
+    "parsed_analysis.json",
+    "refactored_code.java",
+    "refactoring_plan.txt",
+    "repo_state_debug.json",
+    "smell_report.txt"
+  ]
+}

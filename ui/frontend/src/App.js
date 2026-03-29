@@ -42,11 +42,19 @@ function App() {
         body: formData,
       });
 
-      if (!response.ok) {
-        throw new Error('Processing failed');
+      // Always parse JSON — both success and error responses are JSON
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        // New error shape: { success: false, error: { message, type, details } }
+        // Legacy shape:    { error: "string" }
+        const msg =
+          result?.error?.message ||
+          (typeof result?.error === 'string' ? result.error : null) ||
+          'Processing failed';
+        throw new Error(msg);
       }
 
-      const result = await response.json();
       setProcessingResult(result);
     } catch (err) {
       setError(err.message);

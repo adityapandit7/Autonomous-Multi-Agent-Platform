@@ -1,0 +1,21 @@
+============================================================
+CODE SMELL ANALYSIS REPORT — Java
+============================================================
+Methods analysed : 1
+Classes analysed : 1
+Total LOC        : 43
+Smells detected  : 2
+Parser used      : javalang
+Thresholds from  : DACOS dataset
+
+🟡 [HIGH] Multifaceted Abstraction
+   Method    : main
+   Reason    : Method 'main' has 3 distinct responsibilities (threshold: 2)
+   Refactor  : Apply Single Responsibility Principle — extract each responsibility into its own method.
+
+🟡 [MEDIUM] Long Method
+   Method    : main
+   Reason    : Method 'main' has 37 lines (threshold: 30)
+   Refactor  : Apply Extract Method — split into focused private helper methods.
+
+============================================================

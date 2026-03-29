@@ -1,0 +1,46 @@
+{
+  "parse_success": true,
+  "parser_used": "javalang",
+  "language": "java",
+  "total_loc": 85,
+  "classes": [
+    {
+      "name": "OrderProcessor",
+      "lineno": 1,
+      "loc": 85,
+      "method_count": 2
+    }
+  ],
+  "functions": [
+    {
+      "name": "calculateDiscount",
+      "lineno": 6,
+      "loc": 56,
+      "param_count": 8,
+      "return_type": "double",
+      "modifiers": [
+        "public"
+      ],
+      "nesting_depth": 2,
+      "conditional_count": 16,
+      "loop_count": 0,
+      "responsibility_count": 2,
+      "parser_used": "javalang"
+    },
+    {
+      "name": "processOrder",
+      "lineno": 66,
+      "loc": 19,
+      "param_count": 4,
+      "return_type": "void",
+      "modifiers": [
+        "public"
+      ],
+      "nesting_depth": 2,
+      "conditional_count": 1,
+      "loop_count": 1,
+      "responsibility_count": 3,
+      "parser_used": "javalang"
+    }
+  ]
+}

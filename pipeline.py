@@ -528,9 +528,7 @@ class Pipeline:
             logger.warning("[TP-3]    Planner requested but RepoState is None — enable TP-1 first.")
         else:
             logger.info("[Block 4]  PlannerAgent disabled (TP-3 off)")
-        print("\n--- PROVENANCE LOG ---")
-        for entry in repo_state.provenance_log:
-            print(f"{entry.version}: {entry.agent_id} → {entry.action}")
+
 
         # ══════════════════════════════════════════════════════════════════
         # BLOCK 5 — AGENT DISPATCH

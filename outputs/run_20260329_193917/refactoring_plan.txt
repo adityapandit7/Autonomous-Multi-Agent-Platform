@@ -1,0 +1,14 @@
+JAVA REFACTORING PLAN
+==================================================
+Methods analysed : 1
+Smells detected  : 2
+
+1. [HIGH] Multifaceted Abstraction
+   Method    : main
+   Measured  : responsibility_count = 3 (threshold: 2)
+   Action    : Apply Single Responsibility Principle — extract each responsibility into its own method.
+
+2. [MEDIUM] Long Method
+   Method    : main
+   Measured  : loc = 37 (threshold: 30)
+   Action    : Apply Extract Method — split into focused private helper methods.

@@ -1,0 +1,32 @@
+{
+  "parse_success": true,
+  "parser_used": "javalang",
+  "language": "java",
+  "total_loc": 43,
+  "classes": [
+    {
+      "name": "BadCode",
+      "lineno": 3,
+      "loc": 41,
+      "method_count": 1
+    }
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "lineno": 5,
+      "loc": 37,
+      "param_count": 1,
+      "return_type": "void",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "nesting_depth": 2,
+      "conditional_count": 2,
+      "loop_count": 2,
+      "responsibility_count": 3,
+      "parser_used": "javalang"
+    }
+  ]
+}

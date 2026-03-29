@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class BadCode {
+
+    public static void main(String[] args) {
+        int x = 10;
+        int y = 20;
+        int z = 0;
+
+        for (int i = 0; i < 5; i++) {
+            z += i * 2 + 3;
+        }
+
+        System.out.println("Result: " + z);
+
+        if (x > 5 && y > 10 && z > 15) {
+            System.out.println("All conditions met");
+        }
+
+        List<Object> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add(Integer.valueOf(100));
+
+        for (Object item : list) {
+            System.out.println(item);
+        }
+
+        processData(list);
+        processData(list);
+
+        calculate(5, 10);
+        calculate(5, 10);
+
+        String s = "";
+        if (!s.isEmpty()) {
+            System.out.println(s);
+        }
+
+        System.out.println("Done");
+    }
+
+}

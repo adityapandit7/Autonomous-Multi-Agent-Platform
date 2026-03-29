@@ -1,0 +1,42 @@
+{
+  "timestamp": "20260329_195443",
+  "mode": "refactor",
+  "agent_flags_active": {
+    "use_repo_state": true,
+    "use_symbol_index": true,
+    "use_evaluator": true
+  },
+  "input": {
+    "parser": "javalang",
+    "loc": 43,
+    "methods": 1,
+    "classes": 1,
+    "smells": [
+      {
+        "name": "Multifaceted Abstraction",
+        "severity": "high",
+        "function": "main"
+      },
+      {
+        "name": "Long Method",
+        "severity": "medium",
+        "function": "main"
+      }
+    ]
+  },
+  "refactor": null,
+  "doc": null,
+  "evaluation_scores": {},
+  "tasks_completed": 0,
+  "tasks_total": 0,
+  "state_version": 2,
+  "files": [
+    "PROMPT_doc_agent.txt",
+    "PROMPT_refactor_agent.txt",
+    "parsed_analysis.json",
+    "refactored_code.java",
+    "refactoring_plan.txt",
+    "repo_state_debug.json",
+    "smell_report.txt"
+  ]
+}
