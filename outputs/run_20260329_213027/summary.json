@@ -1,6 +1,6 @@
 {
-  "timestamp": "20260329_111627",
-  "mode": "both",
+  "timestamp": "20260329_213027",
+  "mode": "document",
   "agent_flags_active": {
     "use_repo_state": true,
     "use_symbol_index": true,
